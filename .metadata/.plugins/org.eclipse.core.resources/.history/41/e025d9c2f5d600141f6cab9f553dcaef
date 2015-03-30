@@ -1,0 +1,21 @@
+package ro.pub.cs.systems.pdsd.practicaltest01var01;
+
+import ro.pub.cs.systems.pdsd.practicaltest01var01.PracticalTest01Var01MainActivity.Ascultator;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+
+public class PracticalTest01Var01SecondaryActivity extends Activity {
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_practical_test01_var01_main);
+        
+        
+        
+    }
+
+}

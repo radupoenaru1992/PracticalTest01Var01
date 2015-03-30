@@ -1,0 +1,39 @@
+package ro.pub.cs.systems.pdsd.practicaltest01var01;
+
+import ro.pub.cs.systems.pdsd.practicaltest01var01.PracticalTest01Var01MainActivity.Ascultator;
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+
+public class PracticalTest01Var01SecondaryActivity extends Activity {
+	
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_practical_test01_var01_main);
+        
+        sec = (Button)findViewById(R.id.bSec);
+        
+        chp = (CheckBox)findViewById(R.id.chP);
+        che = (CheckBox)findViewById(R.id.chE);
+        chi = (CheckBox)findViewById(R.id.chI);
+        
+        etdr = (EditText)findViewById(R.id.etDr);
+        
+        Ascultator asculta = new Ascultator();
+        
+        chp.setOnClickListener(asculta);
+        che.setOnClickListener(asculta);
+        chi.setOnClickListener(asculta);
+        
+        if (savedInstanceState != null) {
+        	chp.setChecked(savedInstanceState.getBoolean("chp"));
+        	che.setChecked(savedInstanceState.getBoolean("che"));
+        	chi.setChecked(savedInstanceState.getBoolean("chi"));
+        }
+        
+    }
+
+}

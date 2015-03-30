@@ -1,0 +1,62 @@
+package ro.pub.cs.systems.pdsd.practicaltest01var01;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+
+public class PracticalTest01Var01MainActivity extends Activity {
+
+	Button sec;
+	CheckBox chp, che, chi;
+	EditText etdr;
+	
+	private class Ascultator implements View.OnClickListener {
+
+		@Override
+		public void onClick(View v) {
+			
+			String s = etdr.getText().toString();
+			int nr = Integer.parseInt(s);
+			
+			switch (v.getId()) {
+				
+			}
+			
+		}
+		
+	}
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_practical_test01_var01_main);
+        
+        sec = (Button)findViewById(R.id.bSec);
+        
+        chp = (CheckBox)findViewById(R.id.chP);
+        che = (CheckBox)findViewById(R.id.chE);
+        chi = (CheckBox)findViewById(R.id.chI);
+        
+        etdr = (EditText)findViewById(R.id.etDr);
+        
+        Ascultator asculta = new Ascultator();
+        
+        chp.setOnClickListener(asculta);
+        che.setOnClickListener(asculta);
+        chi.setOnClickListener(asculta);
+        
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.practical_test01_var01_main, menu);
+        return true;
+    }
+    
+}
